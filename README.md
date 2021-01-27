@@ -8,7 +8,7 @@ https://mari-linhares.github.io/codando-deep-learning-jax/
 
 # Codando Deep Learning :computer::thinking::brazil:
 
-Este repositório contém o código utilizado para o curso [Codando Deep Learning](https://mari-linhares.github.io/codando-deep-learning-jax/) [Work In progress].
+Este repositório contém o código utilizado para o curso [Codando Deep Learning](https://mari-linhares.github.io/codando-deep-learning-jax/) [WIP].
 
 ## Autores
 

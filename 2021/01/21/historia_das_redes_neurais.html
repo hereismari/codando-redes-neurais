@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>História das Redes Neurais | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="História das Redes Neurais" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html" />
+<meta property="og:url" content="https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-21T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html","@type":"BlogPosting","headline":"História das Redes Neurais","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/codando-deep-learning-jax/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mari-linhares.github.io/codando-deep-learning-jax/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/codando-deep-learning-jax/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/codando-deep-learning-jax/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/codando-deep-learning-jax/about/">About Me</a><a class="page-link" href="/codando-deep-learning-jax/search/">Search</a><a class="page-link" href="/codando-deep-learning-jax/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">História das Redes Neurais</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
+        Jan 21, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/mari-linhares/codando-deep-learning-jax/tree/master/_notebooks/2021-01-21-historia_das_redes_neurais.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/codando-deep-learning-jax/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/mari-linhares/codando-deep-learning-jax/master?filepath=_notebooks%2F2021-01-21-historia_das_redes_neurais.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/codando-deep-learning-jax/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/mari-linhares/codando-deep-learning-jax/blob/master/_notebooks/2021-01-21-historia_das_redes_neurais.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/codando-deep-learning-jax/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-01-21-historia_das_redes_neurais.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="O-come&#231;o-de-tudo">O come&#231;o de tudo<a class="anchor-link" href="#O-come&#231;o-de-tudo"> </a></h2><p>A história das redes neurais é curiosa, engraçada e triste ao mesmo tempo. Então, senta que lá vem história...</p>
+<p>Certo dia, em 1958, um certo cientista nova-yorkino, chamado <a href="https://en.wikipedia.org/wiki/Frank_Rosenblatt">Frank Rosenblatt</a>, inspirado pelo trabalho de seus colegas que estudavam sobre o cérebro humano, terminou de projetar um algoritmo que conseguia aprender sozinho a resolver problemas simples. Nascia ali, o <strong>Perceptron</strong> (que veremos mais adiante no curso).</p>
+<p>A ideia inicial do Perceptron, na verdade, era ser uma máquina ao invés de um programa. E foi o que aconteceu. Utilizando o poderosíssimo <a href="https://en.wikipedia.org/wiki/IBM_704">IBM 704</a> que fazia 12 mil adições por segundo (só para você ter uma noção, um iPhone 7 faz 300 bilhões) os cientistas construíram uma máquina denominada <strong>Mark I Perceptron</strong>.</p>
+<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/mark_i.jpg?token=AB6HP3EETAQXNEQIHKD2ZCTAOBJRU" alt="" /></p>
+<p><strong>A ideia do Mark I Perceptron era que, para uma dada imagem de entrada, a máquina deveria aprender sozinha a classificar a saída em 0 ou 1</strong>.</p>
+<blockquote><p><em>Mas... 1958? Nem imagens existiam naquela época! Então, como projetaram isso?</em></p>
+</blockquote>
+<p>Os cientistas na época conectaram 400 foto-células a entrada do Mark I para simular uma imagem 20x20 (um pouco maior talvez do que as letras desse texto). E para permitir a calibração da máquina, cada entrada dessa era conectada a um potenciômetro que eram ajustados automaticamente por motores elétricos para mapear as entradas na saída final 0 ou 1.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-winter-is-coming...-&#128532;">The winter is coming... &#128532;<a class="anchor-link" href="#The-winter-is-coming...-&#128532;"> </a></h2><p><img src="https://thumbs.gfycat.com/DeadlyObedientHydra-size_restricted.gif" alt="" /></p>
+<p>O Perceptron, na época, foi um sucesso! Afinal de contas, <strong>ele foi um dos primeiros algoritmos capazes de aprender sozinho</strong>. Além disso, já foi provado que <strong>o Perceptron tem garantia de sucesso quando as duas classes são linearmente separáveis</strong>. Porém, é aí que está o problema: o Perceptron nada mais é que um classificador binário linear. Ou seja, ele só funciona quando o seu problema é binário (2 classes) e seus dados podem ser separados por uma simples reta. Essas condições, no mundo real, são muito difíceis de acontecer. Só para exemplificar, como você separia os dados abaixo com apenas uma reta?</p>
+<p><img src="https://jarvmiller.github.io/post/2017-10-20-neural-networks-units-and-decision-boundaries_files/figure-html/xor%20setup-1.png" alt="" /></p>
+<p><a href="https://jarvmiller.github.io/2017/10/14/neural-nets-pt1/">Fonte da imagem</a></p>
+<p>Pois é. O Perceptron também não consegue resolver esse simples problema (para quem não reparou, o gráfico acima representa a <a href="https://pt.wikipedia.org/wiki/Porta_XOR">porta XOR</a>). Na época, isso desanimou tanto os estudiosos da área de Inteligência Artificial, que pesquisas nessa área só foram retomadas de fato na década de 80. Tal período ficou conhecido como o <strong>inverno da Inteligência Artificial</strong> (<em>AI Winter</em>).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="O-salvador-da-p&#225;tria:-Geoffrey-Hinton">O salvador da p&#225;tria: Geoffrey Hinton<a class="anchor-link" href="#O-salvador-da-p&#225;tria:-Geoffrey-Hinton"> </a></h2><p>O maior problema do Perceptron era que ele era apenas um só. Intuitivamente, é fácil perceber que um neurônio só não faz uma rede neural <del>(assim como uma andorinha só não faz verão)</del>. Pensando assim, muita gente tentou colocar um monte de Perceptrons conectados entre si para tentar resolver um problema. Porém, muitos do que fizeram isso se depararam com um problema: <strong>como propagar o erro da saída para as entradas?</strong> Em outras palavras, <strong>como fazer esse monte de Perceptrons aprenderem ao mesmo tempo sem que um atrapalhe o que o outro aprendeu?"</strong>.</p>
+<p>Pensando nisso, o famoso <a href="https://en.wikipedia.org/wiki/Geoffrey_Hinton">Geoffrey Hinton</a> desenvolveu o algoritmo <strong><a href="https://en.wikipedia.org/wiki/Backpropagation">backpropagation</a></strong> na década de 80. Utilizando o conceito de gradientes e regra da cadeia, tal algoritmo pega o erro de uma rede neural e propaga-o até as entradas, fazendo leves ajustes nos parâmetros (pesos) da rede. Com isso, Redes Neurais com mais de um neurônio e mais de uma camada poderiam começar a ser desenvolvidas e treinadas em problemas mais complexos. Como eu disse, <em>poderiam</em>...</p>
+<p>O problema era que na década de 80, e mesmo na década de 90, o treinamento de tais redes e aplicação do backpropagation era muito pesado ainda. Mesmo supercomputadores se matavam para treinar e executar tais redes ainda. Então, o que fazer?</p>
+<h2 id="Obrigado,-gamers!">Obrigado, gamers!<a class="anchor-link" href="#Obrigado,-gamers!"> </a></h2><p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/gpu_gamers.jpg?token=AB6HP3GTHLCOZZVTGV52RNLAN3T6I" alt="" /></p>
+<p>Mais uma vez o mundo foi salvo graças aos <strong>gamers</strong>. Isso mesmo. Essa obsessão dos gamers em sempre querer computadores mais potentes e jogos com gráficos cada vez melhores, fez com que a indústria dos computadores, especialmente a das GPUs se desenvolvessem num ritmo assustador - regido pela Lei de Murphy. Mas, o que os jogos têm a ver com o desenvolvimento das Redes Neurais?</p>
+<p>A resposta é: matrizes! Como vamos ver num dos próximos assuntos, <strong>Redes Neurais tem tudo a ver com matrizes</strong>. Basicamente, Redes Neurais fazem um monte de cálculo sobre matrizes, como: soma, multiplicão, operaçõe ponto-a-ponto, etc... E, como GPUs são computadores especializados em cálculos sobre matrizes, o campo das Redes Neurais pode se desenvolver como nunca. Cada vez mais, redes mais complexas e pesadas puderam ser desenvolvidas e treinadas.</p>
+<hr />
+<p>Agora que já tivemos uma introdução sobre a história das Redes Neurais, chegou a hora de aprendermos mais sobre elas. Então, prepara um café que chegou a hora de começar os estudos...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Refer&#234;ncias">Refer&#234;ncias<a class="anchor-link" href="#Refer&#234;ncias"> </a></h2><p>Este conteúdo é baseado nos seguintes materiais:</p>
+<ul>
+<li><a href="https://github.com/iamtrask/Grokking-Deep-Learning">Capítulo 3</a> de Grokking Deep Learning.</li>
+<li><a href="https://en.wikipedia.org/wiki/Perceptron">Perceptron</a> da Wikipedia</li>
+<li><a href="https://en.wikipedia.org/wiki/Frank_Rosenblatt">Frank Rosenblatt</a> da Wikipedia</li>
+<li><a href="https://en.wikipedia.org/wiki/Geoffrey_Hinton">Geoffrey Hinton</a> da Wikipedia</li>
+<li><a href="https://en.wikipedia.org/wiki/Backpropagation">Backpropagation</a> da Wikipedia</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/codando-deep-learning-jax/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/codando-deep-learning-jax/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/codando-deep-learning-jax/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/codando-deep-learning-jax/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/codando-deep-learning-jax/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

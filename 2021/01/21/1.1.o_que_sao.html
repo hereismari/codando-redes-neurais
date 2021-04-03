@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>1.1 Introdução a Redes Neurais | fastpages</title>
+<title>1.1 Introdução a Redes Neurais: o que são? | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="1.1 Introdução a Redes Neurais" />
+<meta property="og:title" content="1.1 Introdução a Redes Neurais: o que são?" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -16,10 +16,26 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-21T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html","@type":"BlogPosting","headline":"1.1 Introdução a Redes Neurais","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+{"url":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html","@type":"BlogPosting","headline":"1.1 Introdução a Redes Neurais: o que são?","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mari-linhares.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/codando-deep-learning-jax/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mari-linhares.github.io/codando-deep-learning-jax/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/codando-deep-learning-jax/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
 
 <script>
 function wrap_img(fn) {
@@ -71,7 +87,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">1.1 Introdução a Redes Neurais</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">1.1 Introdução a Redes Neurais: o que são?</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
         Jan 21, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -259,7 +275,7 @@ $b_j$ = Bias de do neurônio j</p>
 <blockquote><p>Ok... então para calcular a saída de um neurônio, eu faço a soma ponderada entre os pesos e todas as saídas dos neurônios da camada anterior. Ate aí tudo bem... mas aí eu somo a isso uma coisa chamada bias e depois aplico sobre esse valor uma função de ativação?</p>
 </blockquote>
 <p>Isso!</p>
-<p><img src="https://raw.githubusercontent.com/arnaldog12/Manual-Pratico-Deep-Learning/master/images/perceptron.png" alt="" />Imagem de: <a href="https://github.com/arnaldog12/Manual-Pratico-Deep-Learning/blob/master/Perceptron.ipynb">https://github.com/arnaldog12/Manual-Pratico-Deep-Learning/blob/master/Perceptron.ipynb</a></p>
+<p><img src="https://raw.githubusercontent.com/arnaldog12/Manual-Pratico-Deep-Learning/master/images/perceptron.png" alt="" /><center> Imagem de: https://github.com/arnaldog12/Manual-Pratico-Deep-Learning/blob/master/Perceptron.ipynb</center></p>
 <blockquote><p>OBS:Se isolarmos um nó da rede neural temos o que é chamado <strong>perceptron</strong>.</p>
 </blockquote>
 <h3 id="Fun&#231;&#227;o-de-Ativa&#231;&#227;o">Fun&#231;&#227;o de Ativa&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#227;o-de-Ativa&#231;&#227;o"> </a></h3><p>Como o próprio nome indica é uma função matemática. Por enquanto não vamos nos preocupar muito com ela, iremos ver mais sobre funções de ativação na seção 1.5.</p>
@@ -269,9 +285,9 @@ $b_j$ = Bias de do neurônio j</p>
 </ul>
 <p><img src="https://cdn-images-1.medium.com/max/937/1*oePAhrm74RNnNEolprmTaQ.png" alt="" /></p>
 <ul>
-<li>Como experado de uma função, uma função de ativação transforma uma entrada em alguma outra coisa que obtemos como saída. No caso das funções de ativação é bastante interessante que ela não seja uma reta, por exemplo na imagem acima temos com a ReLU se comporta, ta vendo que ela é tipo um cotovelo dobrado no zero? Isso faz com que a função não seja uma linha reta, e é isso que queremos na função de ativação, não precisa ser um cotovelo, poderia ser uma barraguinha, mas precisamos de curvas!
-<img src="https://image.freepik.com/free-photo/close-up-photo-elbow-bumping-elbow-greeting-avoid-spread-coronavirus_221404-23.jpg" alt="" /></li>
+<li>Como experado de uma função, uma função de ativação transforma uma entrada em alguma outra coisa que obtemos como saída. No caso das funções de ativação é bastante interessante que ela não seja uma reta, por exemplo na imagem acima temos com a ReLU se comporta, ta vendo que ela é tipo um cotovelo dobrado no zero? Isso faz com que a função não seja uma linha reta, e é isso que queremos na função de ativação, não precisa ser um cotovelo, poderia ser uma barraguinha, mas precisamos de curvas!</li>
 </ul>
+<p><img src="https://image.freepik.com/free-photo/close-up-photo-elbow-bumping-elbow-greeting-avoid-spread-coronavirus_221404-23.jpg" alt="" /></p>
 <h3 id="Bias">Bias<a class="anchor-link" href="#Bias"> </a></h3><p>O bias é um termo independente da entrada que existe para nos dar mobilidade!</p>
 <p>Por exemplo, considere a seguinte função:</p>
 <p>y = 2 * x</p>
@@ -343,18 +359,9 @@ $b_j$ = Bias de do neurônio j</p>
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-34d8a6a4f592&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> 
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># ------- Primeira camada ---------</span>
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>n1_c1 <span class="ansi-blue-fg">=</span> liga_neuronios<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>entrada<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">4.3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> funcao_de_ativacao<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> n2_c1 <span class="ansi-blue-fg">=</span> liga_neuronios<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>entrada<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1.3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2.2</span><span class="ansi-blue-fg">,</span> funcao_de_ativacao<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> 
-
-<span class="ansi-red-fg">NameError</span>: name &#39;liga_neuronios&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>95.00099999999999
+</pre>
 </div>
 </div>
 
@@ -420,17 +427,7 @@ $b_j$ = Bias de do neurônio j</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<thead><tr>
-<th style="text-align:center"><img src="https://cdn.kastatic.org/googleusercontent/rk4fR1jNJsGUfdHOc87UzuQh2zokwYDoVo3Hk1m3s6ToGDgW6KxgrsUeIj8-CJeV6cNf6WB8B6sRHt3BoGBdVY7h" alt="" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><em>Imagem de Khan Academy</em></td>
-</tr>
-</tbody>
-</table>
+<p><img src="https://cdn.kastatic.org/googleusercontent/rk4fR1jNJsGUfdHOc87UzuQh2zokwYDoVo3Hk1m3s6ToGDgW6KxgrsUeIj8-CJeV6cNf6WB8B6sRHt3BoGBdVY7h" alt="" title="Imagem de Khan Academy" /></p>
 <p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/mult_matriz.png?token=AB6HP3GQH34XUFSJZ2FXB63AN3SLM" alt="" /></p>
 <h3 id="Por-que-utilizar-multiplica&#231;&#227;o-de-matrizes-&#233;-mais-eficiente?">Por que utilizar multiplica&#231;&#227;o de matrizes &#233; mais eficiente?<a class="anchor-link" href="#Por-que-utilizar-multiplica&#231;&#227;o-de-matrizes-&#233;-mais-eficiente?"> </a></h3><ol>
 <li>GPUs manipulam matrizes de forma extremamente eficiente!</li>
@@ -614,7 +611,7 @@ $b_j$ = Bias de do neurônio j</p>
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/codando-deep-learning-jax/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/codando-deep-learning-jax/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"></ul>
 </div>
 
   </div>

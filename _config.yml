@@ -6,15 +6,15 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
-github_username: mari-linhares
+title: Codando Deep Learning
+description: Curso de Deep Learning para programdoras.
+github_username: hereismari
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "codando-deep-learning-jax"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "https://mari-linhares.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://hereismari.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############

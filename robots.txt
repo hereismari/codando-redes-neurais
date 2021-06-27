@@ -1,1 +1,1 @@
-Sitemap: https://mari-linhares.github.io/codando-deep-learning-jax/sitemap.xml
+Sitemap: https://hereismari.github.io/codando-deep-learning-jax/sitemap.xml

@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -202,6 +202,7 @@ Nós também vimos que os pesos e bias são, em geral, inicializados com valores
 <p>Parece uma boa ideia, né? <font color="red">**Errado!**</font> <strong>Essa é pior coisa que se pode fazer ao inicializar os pesos de uma rede neural!</strong> Parando para pensar um pouco melhor, fazendo isso nós vamos zerar todos os neurônios bem como os gradientes de aprendizagem. <strong>Se os gradientes são zeros, como a rede vai aprender alguma coisa, então?</strong> 
 Vale salientar que seus gradientes podem tender a zero por outras razões (que nós veremos depois). Mas, quando isso acontece, chamamos esse fenômeno de <strong>desaparecimento dos gradientes</strong> (<em>gradient vanishing</em>).</p>
 <p>Sem contar que você será mal visto pela sua família e amigos se inicializar seus pesos com zeros. Em outras palavras, não pense como o Maguila e não faça isso nunca!</p>
+<p>Por outro lado é uma inicialização bem comum para os biases</p>
 
 </div>
 </div>
@@ -216,10 +217,11 @@ Vale salientar que seus gradientes podem tender a zero por outras razões (que n
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nesse momento, você deve estar pensando: "Tá bom, tá bom. Eu já entendi que inicializar todos os pesos com zero é ruim. Mas, e se inicializamos todos os pesos com 1s, então?"</p>
 <p>A resposta é: <strong>é tão ruim quanto!</strong> Pensando um pouquinho, lembra que na primeira camada todos os neurônios recebem as mesmas entradas? Então, se todos os neurônios receberam as mesmas entradas e todos eles tem o mesmo valor de peso (=1), o que que vai acontecer? Isso mesmo: <strong>todos os neurônios vão dar o mesmo resultado!</strong></p>
-<p>Ainda nessa linha de pensamento, como todos os neurônios vão da próxima camada vão receber o resultado de cada neurônio dessa camada (que são todos iguais), a mesma coisa vai se repetir. No fim das contas, você pode até ter um pouquinho de gradiente, mas os gradientes para os neurônios de uma mesma camada vão ser iguais. Assim, seus neurônios vão continuar sem aprender muita coisa.</p>
+<p>Ainda nessa linha de pensamento, como todos os neurônios vão da próxima camada vão receber o resultado de cada neurônio dessa camada (que são todos iguais), a mesma coisa vai se repetir. No fim das contas, você pode até ter um pouquinho de gradiente, mas os gradientes para os neurônios de uma mesma camada vão ser iguais. Assim, todos os seus pesos se manterão iguais para sempre! Nada adianta ter uma camada com milhões de pesos se todos eles são idênticos.</p>
 <blockquote><p>Resumindo até aqui:<strong>não inicialize os seus neurônios com o mesmo valor, pior ainda se esse valor for igual a zero!</strong>
-Se você entendeu isso, deve ter percebido que a melhor maneira de inicializar pesos é dando valores aleatórios para cada um deles. A pergunta agora é: será que é melhor uma variância baixa, alta? Será que a média deve ser zero? É melhor uma distribuição normal ou uniforme?</p>
+(Novamente vale ressaltar que inicializar os viéses dessa maneira não é um problema)</p>
 </blockquote>
+<p>Se você entendeu isso, deve ter percebido que a melhor maneira de inicializar pesos é dando valores aleatórios para cada um deles. A pergunta agora é: será que é melhor uma variância baixa, alta? Será que a média deve ser zero? É melhor uma distribuição normal ou uniforme?</p>
 <p>É isso que vamos ver nas próximas seções.</p>
 
 </div>
@@ -457,7 +459,8 @@ $$\sigma = \sqrt{\frac{2}{in + out}}$$
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pronto! Agora você sabe tudo sobre inicialização de pesos em redes neurais. Provavelmente, a sua única dúvida na cabeça agora é: <strong>da onde vem o $2$ e $6$ nas fórmulas do $\sigma$ das distribuições Glorot?</strong> A verdade é que, no <a href="http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf">artigo original</a>, os autores testaram diversos valores em diversas redes e simplesmente esses valores levaram aos melhores resultados. É, meus amigos e amigas, esse é o mundo da redes neurais: tentativa e erro!</p>
+<p>Pronto! Agora você sabe tudo sobre inicialização de pesos em redes neurais. Provavelmente, a sua única dúvida na cabeça agora é: <strong>da onde vem o $2$ e $6$ nas fórmulas do $\sigma$ das distribuições Glorot?</strong> No <a href="http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf">artigo original</a>, os autores assumem uma função de ativação simétrica (na época era comum usar sigmóides e tangentes hiperbólicas) e concluem que a variância ótima para a geração de saídas é $1/in$, enquanto a ideal para a backpropagation é $1/out$, como um compromisso eles tomam a variância como sendo o inverso da média $2/(in + out)$. 
+O 6 basicamente vem do fato que a variância de uma distribuição uniforme é $(max - min)^2/12$, como a média é 0, min = -max, $\frac{4max^2}{12} = 2/(in + out) \implies max = \sqrt(\frac{6}{in + out})$</p>
 
 </div>
 </div>

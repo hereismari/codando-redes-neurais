@@ -1,10 +1,8 @@
 ---
-name: "[fastpages] Automated Upgrade"
-about: "Trigger a PR for upgrading fastpages"
-title: "[fastpages] Automated Upgrade"
-labels: fastpages-automation
+name: "Melhoria"
+about: "Melhoria"
+title: "[Melhoria] <Insira titulo>"
+labels: melhoria
 assignees: ''
 
 ---
-
-Opening this issue will trigger GitHub Actions to fetch the lastest version of [fastpages](https://github.com/fastai/fastpages).  More information will be provided in forthcoming comments below.

@@ -97,83 +97,48 @@ window.onload = wrap_img;
 
 <p>Neste material iremos utilizar a abordagem de ensinar conceitos de Deep Learning <strong>para programadoras(es)</strong> da maneira que as coisas fiquem mais claras pra você: mostrando como as coisas funcionam, <strong>programando do zero!</strong></p>
 
-<h2 id="sobre-o-curso">Sobre o curso</h2>
+<h2 id="sobre">Sobre</h2>
 
 <p>Aprender um conceito de maneira profunda (tun dun tisss) ainda é difícil e é uma tarefa que exige rigor e disciplina.</p>
 
-<p>Os materiais disponíveis nesse site buscam apresentar conceitos básicos e avançados junto a implementações detalhadas e de fácil entendimento. Para tal não utilizaremos nenhum <a href="https://www.youtube.com/watch?v=SJldOOs4vB8">framework de Deep Learning</a> apenas <strong>Python</strong>. O objetivo do curso não é transformar um programador(a) em um(a) <em>“Machine Learning enginneer”</em> mas sim um excelente material para quem quer entender o funcionamento destas técnicas nos mínimos detalhes.</p>
+<p>Os materiais disponíveis nesse site buscam apresentar conceitos básicos e avançados relacionados a redes neurais junto a implementações de fácil entendimento. 
+Inicialmente não utilizaremos nenhum <a href="https://www.youtube.com/watch?v=SJldOOs4vB8">framework de Deep Learning</a> apenas <strong>Python</strong>, em seguida apresentaremos JAX e como implementar uma sempre rede neural utilizando o framework.</p>
+
+<p>O objetivo desta série de posts não é transformar uma programadora em uma <em>“Machine Learning enginneer”</em> mas sim um excelente material para quem já sabe programar em Python e quer aprender sobres redes neurais.</p>
 
 <p>Junto do código + explicação são apresentados sugestões de exercícios, blogs, artigos, vídeos.</p>
 
-<p><a href="bit.ly/awesome-dl">Quer apenas materiais?</a><br />
-<a href="https://github.com/mari-linhares/codando-deep-learning/tree/master/notebooks">Quer ir direto ao código?</a></p>
+<p>Quer ir direto ao código? https://github.com/hereismari/codando-deep-learning/tree/master/notebooks</p>
 
-<h2 id="estrutura-do-curso">Estrutura do curso</h2>
+<h2 id="estrutura">Estrutura</h2>
 
-<p><strong>Atenção: o curso é totalmente open source e colaborativo, tem sugestões? Quer ajudar? Chega mais!! Crie um issue/PR no repositório!</strong></p>
+<p><strong>Atenção: o material é totalmente open source e colaborativo, tem sugestões? Quer ajudar? Chega mais!! Crie um issue/PR no repositório!</strong></p>
 
 <hr />
-
-<p>Extras:</p>
+<p><strong>Extras</strong></p>
 
 <ul>
   <li><a href="https://mari-linhares.github.io/codando-deep-learning/notebooks/glossario.html">Glossário</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/intro_a_deep_learning.html">Motivação: Introdução a Deep Learning</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html">História das Redes Neurais</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/intro_a_numpy.html">Introdução a Numpy</a></li>
 </ul>
 
 <hr />
 
 <ol>
-  <li>
-    <p>Extra (Opcional)
- 0.1 <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/intro_a_deep_learning.html">Motivação: Introdução a Deep Learning</a><br />
- 0.2 <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/historia_das_redes_neurais.html">História das Redes Neurais</a><br />
- 0.3 <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/intro_a_numpy.html">Introdução a Numpy</a></p>
-  </li>
-  <li>
-    <p>Introdução à Redes Neurais<br />
- 1.1. <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html">O que são ?</a><br />
- 1.2. <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21//1.2.do_que_se_alimentam.html">Do que se alimentam ?</a><br />
- 1.3. <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.3.como_aprendem.html">Como aprendem ?</a><br />
- 1.4. <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.4.funcoes_de_ativacao.html">Funções de ativação</a> <br />
- 1.5. <a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.5.minha_primeira_rede_neural.html">Minha primeira Rede Neural &lt;3</a><br />
- 1.6. Minha primeira Rede Neural com JAX<br />
- 1.7. Desafios e Exercicios</p>
-  </li>
-  <li>
-    <p>Introdução a Redes Neurais com JAX<br />
- 2.1. Introdução a JAX
- 2.2. Algoritmos de otimização: SGD, Momentum, RMSprop, Adam<br />
- 2.3. Inicialização dos pesos<br />
- 2.4. Regularização e Dropout <br />
- 2.5. Normalização: Batch norm, layer norm, group norm.<br />
- 2.6. Data Augmentation</p>
-  </li>
-  <li>
-    <p>Introdução a Redes Neurais Convolucionais com JAX
- 3.1. O que são?<br />
- 3.2. Implementação<br />
- 3.3. Arquiteturas famosas</p>
-  </li>
-  <li>
-    <p>Introdução à Redes Neurais Recorrentes com JAX <br />
- 4.1. O que são?<br />
- 4.2. RNN Simples e Vanish gradients<br />
- 4.3. LSTM 
- 4.4. Desafio: Implementar GRU</p>
-  </li>
-  <li>
-    <p>Introducao a Transformers com JAX<br />
- 5.1. O que sao?<br />
- 5.2. Attention<br />
- 5.3. Arquitetura do Transformer<br />
- 5.4. SoTA Transformers<br />
-—</p>
-  </li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html">O que são ?</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21//1.2.do_que_se_alimentam.html">Do que se alimentam ?</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.3.como_aprendem.html">Como aprendem ?</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.5.minha_primeira_rede_neural.html">Minha primeira Rede Neural &lt;3</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.4.funcoes_de_ativacao.html">Funções de ativação</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.7.inicializacao_dos_pesos.html">Inicialização dos Pesos</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/intro_a_jax.html">Introdução ao JAX</a></li>
+  <li><a href="https://hereismari.github.io/codando-deep-learning-jax/2021/02/10/1.8.minha_primeira_rede_neural_jax.html">Minha primeira Rede Neural com JAX</a></li>
+  <li>Desafios e Exercicios</li>
 </ol>
 
 <hr />
-
-<h1 id="posts">Posts</h1>
 
 
 

@@ -34,7 +34,7 @@ url: "https://hereismari.github.io" # the base hostname & protocol for your site
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/codando-redes-neurais" # the subpath of your site, e.g. "/blog".
+baseurl: "/codando-deep-learning-jax" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 # minima:

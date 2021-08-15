@@ -160,6 +160,7 @@ window.onload = wrap_img;
 </pre></div>
 <p>Similar à funções, as redes neurais possuem entradas e saídas. As entradas são representadas por amostras dos seus dados. As saídas, por sua vez, dependem de que tarefa estamos desempenhando.</p>
 <p>Por exemplo, se estamos treinando uma rede neural para classificar imagens que contém cachorros ou gatos, as entradas serão imagens (matrizes de píxels) e as saídas podem ser simplismente um valor binário (1 se tiver um gato na imagem e 0 se tiver um cachorro). A questão é: não sabemos a melhor função <code>f</code> para mapear as entradas para as saídas. Podemos treinar uma rede neural para achar essa função.</p>
+<p><strong>Requisito importante</strong>: eu posso utilizar qualquer função como uma rede neural? Para treinar modelos da forma convencional <strong>não</strong>. <strong>Sua função tem que ser diferenciável</strong>. Iremos comentar mais sobre esse aspecto mais para frente.</p>
 
 </div>
 </div>
@@ -172,7 +173,7 @@ window.onload = wrap_img;
 <p>A diferenção é que não sabemos qual a função ótima para representar uma entrada:<code>pythondef f(x):
        return x * ? + ??</code></p>
 <p>Não sabemos qual o melhor <code>f</code> possível, mais especificamente, quais valores deveriam ser os valores de <code>?</code> e <code>??</code>?</p>
-<p>Poderíamos tentar várias funções para se <strong>ajustar</strong> aos dados, quando treinamos rede neurais estamos na verdade buscando <strong>aprender</strong> quais são os melhores <strong>parâmetros</strong> (aqui representados por <code>?</code> e <code>??</code>) para a uma certa função função.</p>
+<p>Poderíamos tentar várias funções para se <strong>ajustar</strong> aos dados, quando treinamos rede neurais estamos na verdade buscando <strong>aprender</strong> quais são os melhores <strong>parâmetros</strong> (aqui representados por <code>?</code> e <code>??</code>) para a uma certa função.</p>
 
 </div>
 </div>
@@ -181,15 +182,15 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Redes-Neurais-s&#227;o-constru&#237;das-a-partir-de-camadas">Redes Neurais s&#227;o constru&#237;das a partir de camadas<a class="anchor-link" href="#Redes-Neurais-s&#227;o-constru&#237;das-a-partir-de-camadas"> </a></h2><p>Redes Neurais são definidas em termos de camadas. <strong>A primeira camada representa as entradas da rede, enquanto a última camada representa as saídas</strong>.</p>
 <p>Todas as camadas que estão entre as camadas de entrada e saída são chamadas de <strong>camadas escondidas</strong> (ou <em>hidden layers</em>). Um exemplo de uma Rede Neural com 2 camadas escondidas pode ser vista na figura abaixo:</p>
-<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/rede_neural.png?token=AB6HP3HMKLLO5LAXACCZSHLAN3RXC" alt="" /></p>
-<h3 id="Sobre-as-camadas...">Sobre as camadas...<a class="anchor-link" href="#Sobre-as-camadas..."> </a></h3><p>Com exceção da camada de entrada, toda camada de uma rede é composta pela seguintes propriedades:</p>
+<p><img src="https://github.com/hereismari/codando-deep-learning-jax/blob/master/images/rede_neural.png?raw=true" alt="" /></p>
+<h3 id="Sobre-as-camadas...">Sobre as camadas...<a class="anchor-link" href="#Sobre-as-camadas..."> </a></h3><p>Com exceção da camada de entrada, toda camada de uma rede neural é composta pela seguintes propriedades:</p>
 <ul>
 <li><p><strong>número de neurônios</strong>: na figura acima, a primeira camada escondida tem 4 neurônios, já a segunda camada escondida tem 3 neurônios, enquanto a camada de saída tem apenas 1. Cada neurônio representa um valor.</p>
 </li>
 <li><p><strong>parâmetros</strong>: cada neurônio recebe como entrada todos as saídas dos neurônios das camadas anteriores. Cada entrada dessa é multiplicada por um peso correspondente. <strong>Tais pesos representam o que a Rede Neural pode ajustar para encontrar a solução do problema e são conhecidos como parâmetros</strong>.</p>
 </li>
 </ul>
-<p><strong>A imagem acima mostra apenas uma arquitetura possível para uma rede neural.</strong> Existem vários outros tipos de arquiteturas e outros tipos de camadas que podemos usar para construir uma rede neural. Nessa parte do curso iremos focar nessa arquitetura que se chama <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">MultiLayerPerceptron (MLP)</a>.</p>
+<p><strong>A imagem acima mostra apenas uma arquitetura possível para uma rede neural.</strong> Existem vários outros tipos de arquiteturas e outros tipos de camadas que podemos usar para construir uma rede neural. Neste curso iremos focar nessa arquitetura que se chama <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">MultiLayerPerceptron (MLP)</a>.</p>
 <p>Todas essas camadas são chamadas <strong>camadas densas</strong>. A arquitetura MLP é caracterizada por várias camadas densas uma após a outra (várias camadas intermediárias). Apesar de na imagem acima termos escolhido mostrar apenas 2 camadas intermediárias poderíamos ter quantas quiséssemos, com quantos nós quiséssemos!</p>
 <p>O número de nós de entrada e de saída são fixos dependendo do problema que estamos tentando resolver. Por exemplo, no problema da classificação de imagens de cachorros e gatos, o número de neurônios de entrada seria o número de píxeis da imagem e o número de neurônios na camada de saída um único neurônio (0 ou 1).</p>
 <h3 id="Entendendo-a-matem&#225;tica">Entendendo a matem&#225;tica<a class="anchor-link" href="#Entendendo-a-matem&#225;tica"> </a></h3><p>Vamos focar apenas na computação que envolve o segundo nó da segunda camada intermediária:</p>
@@ -287,7 +288,7 @@ $b_j$ = Bias de do neurônio j</p>
 <ul>
 <li>Como experado de uma função, uma função de ativação transforma uma entrada em alguma outra coisa que obtemos como saída. No caso das funções de ativação é bastante interessante que ela não seja uma reta, por exemplo na imagem acima temos com a ReLU se comporta, ta vendo que ela é tipo um cotovelo dobrado no zero? Isso faz com que a função não seja uma linha reta, e é isso que queremos na função de ativação, não precisa ser um cotovelo, poderia ser uma barraguinha, mas precisamos de curvas!</li>
 </ul>
-<p><img src="https://image.freepik.com/free-photo/close-up-photo-elbow-bumping-elbow-greeting-avoid-spread-coronavirus_221404-23.jpg" alt="" /></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Elbow_%28body%29.jpg/220px-Elbow_%28body%29.jpg" alt="" /></p>
 <h3 id="Bias">Bias<a class="anchor-link" href="#Bias"> </a></h3><p>O bias é um termo independente da entrada que existe para nos dar mobilidade!</p>
 <p>Por exemplo, considere a seguinte função:</p>
 <p>y = 2 * x</p>

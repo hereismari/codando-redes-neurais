@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Do que se alimentam? Introdução a Numpy! | Codando Redes Neurais</title>
+<title>Do que se alimentam? | Codando Redes Neurais</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Do que se alimentam? Introdução a Numpy!" />
+<meta property="og:title" content="Do que se alimentam?" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Introdução a Redes Neurais para programadoras." />
 <meta property="og:description" content="Introdução a Redes Neurais para programadoras." />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-21T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.2.do_que_se_alimentam.html","@type":"BlogPosting","headline":"Do que se alimentam? Introdução a Numpy!","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.2.do_que_se_alimentam.html"},"description":"Introdução a Redes Neurais para programadoras.","@context":"https://schema.org"}</script>
+{"url":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.2.do_que_se_alimentam.html","@type":"BlogPosting","headline":"Do que se alimentam?","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.2.do_que_se_alimentam.html"},"description":"Introdução a Redes Neurais para programadoras.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/codando-deep-learning-jax/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hereismari.github.io/codando-deep-learning-jax/feed.xml" title="Codando Redes Neurais" /><link rel="shortcut icon" type="image/x-icon" href="/codando-deep-learning-jax/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,13 +87,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Do que se alimentam? Introdução a Numpy!</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Do que se alimentam?</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
         Jan 21, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      15 min read
     
 </span></p>
 
@@ -135,7 +135,8 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vimos anteriormente que podemos abstrair redes neurais como funções, e portanto esperam certas <strong>entradas</strong> e produzem <strong>saídas</strong>, tanto as entradas como saídas são chamadas <strong>tensores</strong>. Nesta seção iremos discutir o que são tensores e como manipulá-los com Numpy.</p>
+<p>Vimos anteriormente que podemos abstrair redes neurais como funções, e portanto esperam certas <strong>entradas</strong> e produzem <strong>saídas</strong>, mas o que são essas entradas e saídas exatamente? Tanto as entradas como saídas são <strong>tensores</strong>.</p>
+<p><strong>Nesta seção iremos discutir o que são tensores e como manipulá-los com Numpy.</strong></p>
 <h2 id="O-que-s&#227;o-tensores?">O que s&#227;o tensores?<a class="anchor-link" href="#O-que-s&#227;o-tensores?"> </a></h2><p>Tensores são vetores de diferentes dimensões. Você já conhece tensores, os mais comuns tem nomes próprios:</p>
 
 </div>
@@ -155,9 +156,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">escalar_a</span> <span class="o">=</span> <span class="mf">1.0</span>   <span class="c1"># tensor com dimensoes: (,)</span>
-<span class="n">escalar_b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12</span>   <span class="c1"># tensor com dimensoes: (,)</span>
-<span class="n">escalar_c</span> <span class="o">=</span> <span class="mf">1e-8</span>  <span class="c1"># tensor com dimensoes: (,)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">escalar_a</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">escalar_b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12</span>
+<span class="n">escalar_c</span> <span class="o">=</span> <span class="mf">1e-8</span>
 </pre></div>
 
     </div>
@@ -181,9 +182,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vetor_a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>                                                 <span class="c1"># tensor com dimensoes: (1,)</span>
-<span class="n">vetor_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>                                       <span class="c1"># tensor com dimensoes: (3,)</span>
-<span class="n">vetor_c</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.421</span><span class="p">,</span> <span class="o">-</span><span class="mf">789.12</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">53421093.1231</span><span class="p">,</span> <span class="o">-</span><span class="mf">123.1</span><span class="p">]</span>  <span class="c1"># tensor com dimensoes: (6,)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vetor_a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+<span class="n">vetor_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="n">vetor_c</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.421</span><span class="p">,</span> <span class="o">-</span><span class="mf">789.12</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">53421093.1231</span><span class="p">,</span> <span class="o">-</span><span class="mf">123.1</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -207,9 +208,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">]]</span> <span class="c1"># tensor com dimensoes: (1, 1)</span>
-<span class="n">matriz_b</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]]</span> <span class="c1"># tensor com dimensoes: (3, 1)</span>
-<span class="n">matriz_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">]</span> <span class="c1"># tensor com dimensoes: (3, 10)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">]]</span> <span class="c1"># 1 x 1</span>
+<span class="n">matriz_b</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]]</span> <span class="c1"># 3 x 1</span>
+<span class="n">matriz_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">]</span> <span class="c1"># 3 x 10</span>
 </pre></div>
 
     </div>
@@ -752,13 +753,13 @@ Tempo utilizando numpy: 3.887 (s)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="M&#225;gica-com-Numpy:-Broadcast">M&#225;gica com Numpy: Broadcast<a class="anchor-link" href="#M&#225;gica-com-Numpy:-Broadcast"> </a></h3>
+<h3 id="M&#225;gica-com-Numpy:-Broadcasting">M&#225;gica com Numpy: Broadcasting<a class="anchor-link" href="#M&#225;gica-com-Numpy:-Broadcasting"> </a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Esse código python quebra por que não da pra somar inteiro com lista.</p>
+<p>Esse código python quebra porque não da pra somar inteiro com lista.</p>
 
 </div>
 </div>
@@ -799,7 +800,7 @@ Tempo utilizando numpy: 3.887 (s)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mas pensa um pouco... o código faz "sentido", parece que 1 deveria ser somado a cada elemento da lista.</p>
+<p>Mas pensa um pouco... pensando em soma de tensores... o código faz "sentido", parece que 1 deveria ser somado a cada elemento da lista.</p>
 <p>Bem que dava pra python ser mais esperto e entender que o que a gente quer é na verdade <strong>propagar</strong> o 1 por toda a matriz somando cada elemento a 1.</p>
 <p>Essa propagação é justamente o que chamamos de <a href="https://docs.scipy.org/doc/numpy-1.15.0/user/basics.broadcasting.html"><strong>broadcasting</strong></a>. Que é a ideia de que vetores de tamanhos e formatos diferentes são compatíveis para certas operações em alguns casos!</p>
 
@@ -3851,7 +3852,7 @@ a * b
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Lista de todas as operações: <a href="http://docs.scipy.org/doc/numpy/reference/routines.math.html"> documentation</a>.</p>
+<p>Lista de todas as operações: <a href="http://docs.scipy.org/doc/numpy/reference/routines.math.html">Documentação de Numpy</a>.</p>
 
 </div>
 </div>
@@ -3864,18 +3865,18 @@ a * b
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Depois de ler isso tudo sobre tensores, você deve estar pensando: <em>"Beleza, mas... para que redes neurais usam esses tais tensores?"</em>. Redes neurais usam tensores não apenas pra representar as entradas, mas basicamente para manipular toda a computação do início ao fim, desde a entrada até a saída tudo são tensores. Por exemplo:</p>
+<p>Depois de ler isso tudo sobre tensores, você deve estar pensando:</p>
+<blockquote><p>"Beleza, mas... como que redes neurais usam esses tais tensores?".</p>
+</blockquote>
+<p>Por exemplo:1. As entradas podem ser representadas por tensores bi-dimensionais (matrizes), onde <strong>cada linha dessa matriz vai representar uma amostra</strong> de uma base, equanto <strong>cada coluna representa um atributo</strong> (também chamada de <em>feature</em>). Por exemplo, no seguinte banco de dados: <img src="https://cdn-images-1.medium.com/max/1600/1*Qt_pYlwBeHtTewnEdksYKQ.png" alt="" /> Nós temos <strong>5 amostras</strong> (5 linhas) e <strong>4 atributos</strong> (<code>sepal length</code>, <code>sepal width</code>, <code>petal length</code> e <code>petal width</code>) - a coluna <code>target</code> nesse banco representa um outro atributo que estamos interessados em identificar para cada amostra.</p>
 <ol>
-<li>As entradas podem ser representadas por tensores bi-dimensionais (matrizes), onde <strong>cada linha dessa matriz vai representar uma amostra</strong> do seu banco, enquanto <strong>cada coluna representa um atributo</strong> (também chamada de <em>feature</em>). Por exemplo, no seguinte banco de dados: <img src="https://cdn-images-1.medium.com/max/1600/1*Qt_pYlwBeHtTewnEdksYKQ.png" alt="" /> Nós temos <strong>5 amostras</strong> (5 linhas) e <strong>4 atributos</strong> (<code>sepal length</code>, <code>sepal width</code>, <code>petal length</code> e <code>petal width</code>) - a coluna <code>target</code> nesse banco representa um outro atributo que estamos interessados em identificar para cada amostra.  </li>
-</ol>
-<ol>
-<li><p>Já considerando imagens as entradas vão ser agora representadas por tensores 4-dimensionais. Em geral, a maioria dos frameworks assumem que esses tensores estão no formato <code>NxHxWxC</code>, onde:</p>
+<li><p>Considerando imagens as entradas vão ser agora representadas por tensores 4-dimensionais. Em geral, a maioria dos frameworks assumem que esses tensores estão no formato <code>NxHxWxC</code>, onde:</p>
 <ul>
 <li><code>N</code>: representa a quantidade de imagens no seu banco</li>
 <li><code>H</code>: a altura de cada imagem</li>
 <li><code>W</code>: a largura de cada imagem</li>
 <li><p><code>C</code>: a quantidade de canais de cada imagem. Imagens em níveis de cinza têm apenas 1 canal, enquanto imagens coloridas possuem 3 canais - vermelho (R), verde (G) e azul (B).</p>
-<p>Alguns frameworks também aceitam tensores no formato <code>NxCxHxW</code>, ou seja, os canais da imagem vêm logo após a quantidade de imagens.</p>
+<p>Também é comum ver tensores no formato <code>NxCxHxW</code>, ou seja, os canais da imagem vêm logo após a quantidade de imagens.</p>
 </li>
 </ul>
 </li>

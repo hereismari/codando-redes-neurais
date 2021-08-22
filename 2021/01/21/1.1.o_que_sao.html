@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>1.1 Introdução a Redes Neurais: o que são? | Codando Redes Neurais</title>
+<title>O que são redes neurais? | Codando Redes Neurais</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="1.1 Introdução a Redes Neurais: o que são?" />
+<meta property="og:title" content="O que são redes neurais?" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Introdução a Redes Neurais para programadoras." />
 <meta property="og:description" content="Introdução a Redes Neurais para programadoras." />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-21T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html","@type":"BlogPosting","headline":"1.1 Introdução a Redes Neurais: o que são?","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html"},"description":"Introdução a Redes Neurais para programadoras.","@context":"https://schema.org"}</script>
+{"url":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html","@type":"BlogPosting","headline":"O que são redes neurais?","dateModified":"2021-01-21T00:00:00-06:00","datePublished":"2021-01-21T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hereismari.github.io/codando-deep-learning-jax/2021/01/21/1.1.o_que_sao.html"},"description":"Introdução a Redes Neurais para programadoras.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/codando-deep-learning-jax/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hereismari.github.io/codando-deep-learning-jax/feed.xml" title="Codando Redes Neurais" /><link rel="shortcut icon" type="image/x-icon" href="/codando-deep-learning-jax/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,7 +87,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">1.1 Introdução a Redes Neurais: o que são?</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">O que são redes neurais?</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-21T00:00:00-06:00" itemprop="datePublished">
         Jan 21, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -160,7 +160,6 @@ window.onload = wrap_img;
 </pre></div>
 <p>Similar à funções, as redes neurais possuem entradas e saídas. As entradas são representadas por amostras dos seus dados. As saídas, por sua vez, dependem de que tarefa estamos desempenhando.</p>
 <p>Por exemplo, se estamos treinando uma rede neural para classificar imagens que contém cachorros ou gatos, as entradas serão imagens (matrizes de píxels) e as saídas podem ser simplismente um valor binário (1 se tiver um gato na imagem e 0 se tiver um cachorro). A questão é: não sabemos a melhor função <code>f</code> para mapear as entradas para as saídas. Podemos treinar uma rede neural para achar essa função.</p>
-<p><strong>Requisito importante</strong>: eu posso utilizar qualquer função como uma rede neural? Para treinar modelos da forma convencional <strong>não</strong>. <strong>Sua função tem que ser diferenciável</strong>. Iremos comentar mais sobre esse aspecto mais para frente.</p>
 
 </div>
 </div>
@@ -170,7 +169,7 @@ window.onload = wrap_img;
 <p>Assim, uma simples definição de redes neurais é:</p>
 <blockquote><p>"Redes Neurais são <em>aproximadores de funções</em>"</p>
 </blockquote>
-<p>A diferenção é que não sabemos qual a função ótima para representar uma entrada:<code>pythondef f(x):
+<p>A diferença é que não sabemos qual a função ótima para representar uma entrada:<code>pythondef f(x):
        return x * ? + ??</code></p>
 <p>Não sabemos qual o melhor <code>f</code> possível, mais especificamente, quais valores deveriam ser os valores de <code>?</code> e <code>??</code>?</p>
 <p>Poderíamos tentar várias funções para se <strong>ajustar</strong> aos dados, quando treinamos rede neurais estamos na verdade buscando <strong>aprender</strong> quais são os melhores <strong>parâmetros</strong> (aqui representados por <code>?</code> e <code>??</code>) para a uma certa função.</p>
@@ -180,9 +179,24 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Redes-Neurais-s&#227;o-constru&#237;das-a-partir-de-camadas">Redes Neurais s&#227;o constru&#237;das a partir de camadas<a class="anchor-link" href="#Redes-Neurais-s&#227;o-constru&#237;das-a-partir-de-camadas"> </a></h2><p>Redes Neurais são definidas em termos de camadas. <strong>A primeira camada representa as entradas da rede, enquanto a última camada representa as saídas</strong>.</p>
+<h2 id="Caracter&#237;sticas-das-redes-neurais">Caracter&#237;sticas das redes neurais<a class="anchor-link" href="#Caracter&#237;sticas-das-redes-neurais"> </a></h2><p>Algumas características específicas de redes neurais como aproximadoras de função são:</p>
+<ul>
+<li>Redes neurais são hierárquicas. Isto é, temos uma série de computações (camadas) colocadas de forma sequencialmente. </li>
+</ul>
+
+<pre><code>Entradas: x ----&gt; Camada: f_1 ------&gt;  Camada: f_2 ------&gt;  Camada: f_3 ------&gt;  Saídas: f(x)</code></pre>
+<ul>
+<li>Posso implementar minha camada como eu quiser? Não. O principal requisito de camadas ou partes das redes neurais é que elas devem ser <strong>diferenciáveis</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Redes-neurais-s&#227;o-hier&#225;rquicas:-s&#227;o-constru&#237;das-a-partir-de-camadas">Redes neurais s&#227;o hier&#225;rquicas: s&#227;o constru&#237;das a partir de camadas<a class="anchor-link" href="#Redes-neurais-s&#227;o-hier&#225;rquicas:-s&#227;o-constru&#237;das-a-partir-de-camadas"> </a></h2><p>Redes Neurais são definidas em termos de camadas. <strong>A primeira camada representa as entradas da rede, enquanto a última camada representa as saídas</strong>.</p>
 <p>Todas as camadas que estão entre as camadas de entrada e saída são chamadas de <strong>camadas escondidas</strong> (ou <em>hidden layers</em>). Um exemplo de uma Rede Neural com 2 camadas escondidas pode ser vista na figura abaixo:</p>
-<p><img src="https://github.com/hereismari/codando-deep-learning-jax/blob/master/images/rede_neural.png?raw=true" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/rede_neural.png?token=AB6HP3GP7O2GIYF6QHIATPLBFJZVS" alt="" /></p>
 <h3 id="Sobre-as-camadas...">Sobre as camadas...<a class="anchor-link" href="#Sobre-as-camadas..."> </a></h3><p>Com exceção da camada de entrada, toda camada de uma rede neural é composta pela seguintes propriedades:</p>
 <ul>
 <li><p><strong>número de neurônios</strong>: na figura acima, a primeira camada escondida tem 4 neurônios, já a segunda camada escondida tem 3 neurônios, enquanto a camada de saída tem apenas 1. Cada neurônio representa um valor.</p>
@@ -299,7 +313,7 @@ $b_j$ = Bias de do neurônio j</p>
 <p><a href="https://stackoverflow.com/questions/2480650/role-of-bias-in-neural-networks">Mais informações sobre bias (em inglês) nesse link</a>.</p>
 <p><strong>Importante</strong></p>
 <p>Nos diagramas que mostramos, o bias não era mostrado, por que? Geralmente pra deixar a visualização mais bonitinha não mostramos o bias, abaixo segue nossa rede reural com o bias no diagrama:</p>
-<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/bias_rede_neural.png?token=AB6HP3GB4R7XYA5NMKANCKTAN3SHE" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/bias_rede_neural.png?token=AB6HP3H2QH3HO62NVFV3SZLBFJZ3I" alt="" /></p>
 <p>O bias é um nó na rede como qualquer outro, porém ele não se conecta aos nós da camada anterior, podemos pensar que seu valor é fixo e igual a 1.</p>
 <blockquote><p><em>“Se hoje é o Dia da rede neural, ontem eu disse que rede neural... o dia da rede neural é dia da camada, do peso e das funções de ativação, mas também é o dia dos bias. Sempre que você olha uma camada densa, há sempre uma figura oculta, que é um bias atrás, o que é algo muito importante.”</em> - Marianne Rousseff.</p>
 </blockquote>
@@ -399,8 +413,7 @@ $b_j$ = Bias de do neurônio j</p>
 <li>camada intermediária 1: 100 * 200 (100 entradas para cada nó, 200 nós) = 20000</li>
 <li>camada intermediária 2: 200 * 200 (200 entradas para cada nó, 200 nós) = 40000</li>
 </ul>
-<p>Totalizando: 60000 operações para calcular todas as saídas.</p>
-<p>Isso é péssimo :((! Queremos várias camadas na nossa rede, não podemos ser tão lentos :((</p>
+<p>Totalizando: 60000 operações para calcular todas as saídas. Queremos várias camadas na nossa rede, não podemos ser tão lentos :((</p>
 <p>Felizmente temos uma solução para deixar esse cálculo mais eficiente!!!</p>
 
 </div>
@@ -421,7 +434,10 @@ $b_j$ = Bias de do neurônio j</p>
 <li>Uma camada L precisa de todos os nós da camada L-1 computados.</li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/focando_rede_neural2.png?token=AB6HP3BO4IB5NH7WC5GC5DTAN3TEU" alt="" /></p>
-<p>Agora vem a mágica: 3. Podemos computar todos os valores de uma camada através de multiplicação de matrizes</p>
+<p>Agora vem a sacada:</p>
+<ol>
+<li>Podemos computar todos os valores de uma camada através de multiplicação de matrizes</li>
+</ol>
 
 </div>
 </div>
@@ -429,7 +445,7 @@ $b_j$ = Bias de do neurônio j</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://cdn.kastatic.org/googleusercontent/rk4fR1jNJsGUfdHOc87UzuQh2zokwYDoVo3Hk1m3s6ToGDgW6KxgrsUeIj8-CJeV6cNf6WB8B6sRHt3BoGBdVY7h" alt="" title="Imagem de Khan Academy" /></p>
-<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/mult_matriz.png?token=AB6HP3GQH34XUFSJZ2FXB63AN3SLM" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/mult_matriz.png?token=AB6HP3GHJNWGKC6XSAE4KDTBFJ2CS" alt="" /></p>
 <h3 id="Por-que-utilizar-multiplica&#231;&#227;o-de-matrizes-&#233;-mais-eficiente?">Por que utilizar multiplica&#231;&#227;o de matrizes &#233; mais eficiente?<a class="anchor-link" href="#Por-que-utilizar-multiplica&#231;&#227;o-de-matrizes-&#233;-mais-eficiente?"> </a></h3><ol>
 <li>GPUs manipulam matrizes de forma extremamente eficiente!</li>
 <li>Existem otimizações para lidar com esse tipo de operação <a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">de maneira eficiente</a>.</li>
@@ -441,8 +457,8 @@ $b_j$ = Bias de do neurônio j</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Codando-uma-rede-neural-com-multiplica&#231;&#227;o-de-matrizes">Codando uma rede neural com multiplica&#231;&#227;o de matrizes<a class="anchor-link" href="#Codando-uma-rede-neural-com-multiplica&#231;&#227;o-de-matrizes"> </a></h2><p>Vamos modificar o código que fizemos anteriormente para utilizar multiplicação de matrizes. Para isso iremos utilizar a biblioteca Numpy, caso não tenha familiaridade recomendamos a seção de <a href="https://mari-linhares.github.io/codando-deep-learning/notebooks/intro_a_numpy.html">introdução a Numpy</a></p>
-<p><img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/codando_rede_neural.png?token=AB6HP3BFRDS3MYGDEEMIAG3AN3TIO" alt="" /></p>
+<h2 id="Codando-uma-rede-neural-com-multiplica&#231;&#227;o-de-matrizes">Codando uma rede neural com multiplica&#231;&#227;o de matrizes<a class="anchor-link" href="#Codando-uma-rede-neural-com-multiplica&#231;&#227;o-de-matrizes"> </a></h2><p>Vamos modificar o código que fizemos anteriormente para utilizar multiplicação de matrizes.
+<img src="https://raw.githubusercontent.com/hereismari/codando-deep-learning-jax/master/images/codando_rede_neural.png?token=AB6HP3HKHC7Y7ZYYTCMTOV3BFJ2TU" alt="" /></p>
 
 </div>
 </div>
@@ -454,7 +470,26 @@ $b_j$ = Bias de do neurônio j</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip3 install numpy
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Programador é bixo preguiçoso então chamamamos numpy de np</span>
+<span class="c1"># pq numpy é muito grande pra ficar digitando toda hora</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">class</span> <span class="nc">DenseLayer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">activation_function</span><span class="p">):</span>
@@ -576,6 +611,14 @@ $b_j$ = Bias de do neurônio j</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclus&#227;o">Conclus&#227;o<a class="anchor-link" href="#Conclus&#227;o"> </a></h2><p>Podemos abstrair redes neurais como aproximadores de funções hierárquicos e diferenciáveis. Para implementar redes neurais de forma eficiente utilizamos multiplicação de matrizes (e outros conceitos de álgebra linear).</p>
+<p>Na próxima sessão vamos ver mais sobre a biblioteca Numpy e como utilizá-la para manipular dados.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Refer&#234;ncias">Refer&#234;ncias<a class="anchor-link" href="#Refer&#234;ncias"> </a></h2><ul>

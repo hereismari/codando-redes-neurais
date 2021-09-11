@@ -6,22 +6,25 @@
 
 https://hereismari.github.io/codando-redes-neurais/
 
-# Codando Deep Learning :computer::thinking::brazil:
+# Codando Redes Neurais :computer:🧠
 
-Este repositório contém o código utilizado para o curso [Codando Deep Learning](https://mari-linhares.github.io/codando-redes-neurais/) [WIP].
+Este repositório contém o código utilizado para o material [Codando Deep Learning](https://mari-linhares.github.io/codando-redes-neurais/). Todos os códigos estão disponíveis como [Jupter Notebooks](https://jupyter.org/).
 
-## Autores
+## O que é o codando redes neurais?
+
+É um conjunto de materiais de código aberto com o objetivo de ensinar conceitos relacionados a redes neurais e Deep Learning utilizando [Numpy](https://numpy.org/) e [JAX](https://jax.readthedocs.io/en/latest/index.html)! Com o codando temos os seguintes objetivos:
+
+1. Oferecer materials **totalmente em portugês** sobre redes neurais e Deep Learning.
+2. Ser um repositório **totalmente aberto e colaborativo** que possa servir de entrada para pessoas desenvolvedoras interssadas em começar com redes neurais (nenhum conhecimento anterior é necessário para conversar com a gente e começar a contribuir!).
+
+## Como posso contribuir?
+
+Você pode olhar os issues abertos com a tag #contribua, os issues mais simples de resolução também terão a tag #simples-e-rapido. Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template #quero-contribuir!
+
+## Principais autores
 
 * Marianne Linhares Monteiro (github: hereismari, twitter: hereismari).
 * Arnaldo Gualberto (github: arnaldog12).
 * Joao Guilhereme Araujo (github: joaogui1, twitter: joaogui1).
-
-## Sobre
-
-Implementações de conceitos relacionados com Machine Learning e Deep Learning utilizando Numpy e JAX!
-
-**Contribuições são muito bem vindas!!**
-
-Repositório com código para o tutorial *Codando Deep Learning*. Este repositório contém conceitos relacionados com Machine Learning e Deep Learning implementados em Jupyter notebooks utilizando Python 3. O código é feito para facilitar o ensino e aprendizado.
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "codando-deep-learning-jax"
+name = "codando-redes-neurais"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]

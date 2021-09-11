@@ -21,6 +21,10 @@ Este repositório contém o código utilizado para o material [Codando Deep Lear
 
 Você pode olhar os issues abertos com a tag [#contribua](https://github.com/hereismari/codando-redes-neurais/labels/contribua), os issues mais simples de resolução também terão a tag [#simples](https://github.com/hereismari/codando-redes-neurais/labels/simples). Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template ["quero contribuir"](https://github.com/hereismari/codando-redes-neurais/issues/new?assignees=hereismari&labels=quero-contribuir&template=quero-contribuir.md&title=%5BQuero+Contribuir%5D+%3Cseu+username+no+github%3E)!
 
+## Algo não está funcionando?
+
+Achou um problema em um dos notebooks? Você pode criar um issue usando o template ["achei um bug"](https://github.com/hereismari/codando-redes-neurais/issues/new?assignees=&labels=bug&template=achei-um-bug-.md&title=%5BBUG%5D+%3CInsira+resumo+do+erro+aqui%3E)!
+
 ## Principais autores
 
 * Marianne Linhares Monteiro (github: hereismari, twitter: hereismari).

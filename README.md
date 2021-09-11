@@ -15,11 +15,11 @@ Este repositório contém o código utilizado para o material [Codando Deep Lear
 É um conjunto de materiais de código aberto com o objetivo de ensinar conceitos relacionados a redes neurais e Deep Learning utilizando [Numpy](https://numpy.org/) e [JAX](https://jax.readthedocs.io/en/latest/index.html)! Com o codando temos os seguintes objetivos:
 
 1. Oferecer materials **totalmente em portugês** sobre redes neurais e Deep Learning.
-2. Ser um repositório **totalmente aberto e colaborativo** que possa servir de entrada para pessoas desenvolvedoras interssadas em começar com redes neurais (nenhum conhecimento anterior é necessário para conversar com a gente e começar a contribuir!).
+2. Ser um repositório **totalmente aberto e colaborativo** que possa servir de entrada para pessoas desenvolvedoras interessadas em começar com redes neurais (nenhum conhecimento anterior é necessário para conversar com a gente e começar a contribuir!).
 
 ## Como posso contribuir?
 
-Você pode olhar os issues abertos com a tag [#contribua](https://github.com/hereismari/codando-redes-neurais/labels/contribua), os issues mais simples de resolução também terão a tag [#simples](https://github.com/hereismari/codando-redes-neurais/labels/simples). Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template "quero contribuir"!
+Você pode olhar os issues abertos com a tag [#contribua](https://github.com/hereismari/codando-redes-neurais/labels/contribua), os issues mais simples de resolução também terão a tag [#simples](https://github.com/hereismari/codando-redes-neurais/labels/simples). Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template ["quero contribuir"](https://github.com/hereismari/codando-redes-neurais/issues/new?assignees=hereismari&labels=quero-contribuir&template=quero-contribuir.md&title=%5BQuero+Contribuir%5D+%3Cseu+username+no+github%3E)!
 
 ## Principais autores
 

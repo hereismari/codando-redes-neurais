@@ -19,7 +19,7 @@ Este repositório contém o código utilizado para o material [Codando Deep Lear
 
 ## Como posso contribuir?
 
-Você pode olhar os issues abertos com a tag #contribua, os issues mais simples de resolução também terão a tag #simples-e-rapido. Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template #quero-contribuir!
+Você pode olhar os issues abertos com a tag #contribua, os issues mais simples de resolução também terão a tag #simples-e-rapido. Ainda sim caso queira contribuir mas não sabe como começar pode criar um issue novo usando o template "quero contribuir"!
 
 ## Principais autores
 
